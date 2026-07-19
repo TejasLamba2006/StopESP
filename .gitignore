@@ -1,0 +1,19 @@
+# Build output
+build/
+.gradle/
+
+# Run-paper server files
+run/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OMC / tooling state
+.omc/
+.remember/

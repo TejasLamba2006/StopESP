@@ -1,0 +1,22 @@
+name: StopESP
+version: '${version}'
+main: com.github.tejaslamba2006.stopesp.StopESP
+api-version: '26.1'
+authors: [ tejaslamba2006 ]
+depend: [ ProtocolLib ]
+folia-supported: true
+
+commands:
+  stopesp:
+    description: Main command for StopESP
+    permission: stopesp.admin
+    usage: /stopesp <reload|on|off|debug>
+
+permissions:
+  stopesp.admin:
+    description: Access to all StopESP commands
+    default: op
+
+  stopesp.bypass:
+    description: Bypass StopESP – blocks are never hidden for this player
+    default: false

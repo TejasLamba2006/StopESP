@@ -1,0 +1,217 @@
+# ================================================================
+# StopESP Configuration
+# ================================================================
+
+# Whether to send the thanks/support message to ops when they join.
+show-thanks-message: true
+
+# The distance (in blocks) at which protected blocks are revealed to the player.
+reveal-radius: 20.0
+
+# Per-world reveal-radius overrides (optional).
+# If a world is listed here, its value overrides the global reveal-radius.
+world-radius-overrides:
+  # world_nether: 15.0
+  # world_the_end: 12.0
+
+# Worlds where AzAntiESP is ACTIVE.
+# In all other worlds, the system will do nothing (better performance).
+enabled-worlds:
+  - world
+  - world_nether
+  - world_the_end
+
+# How many server ticks between each visibility scan.
+# 1 = every tick (smoothest, most CPU). 2-4 = good balance.
+scan-interval: 1
+
+# How many consecutive scan cycles a block must be invisible before it gets hidden again.
+# Higher = less flickering, but slower hide reaction. Default: 3
+visibility-buffer: 3
+
+# Frustum culling: skip blocks that are behind the player (outside ~180° FOV).
+# Disabling this reveals blocks behind you earlier, but uses more CPU.
+frustum-culling: true
+
+# Material sent to the client as a fake block to replace hidden ones.
+# AUTO = smart per-dimension (Stone / Deepslate / Netherrack / End Stone)
+# Other options: AIR, STONE, DEEPSLATE, NETHERRACK, END_STONE
+fake-block-mode: AUTO
+
+# Number of worker threads for async visibility calculations.
+# -1 = auto (CPU cores * 2). Set a fixed number to cap resource usage.
+worker-threads: -1
+
+# Blocks that will be HIDDEN from the player until they are nearby.
+protected-blocks:
+  # Containers & Storage
+  - CHEST
+  - TRAPPED_CHEST
+  - BARREL
+  - ENDER_CHEST
+  - SHULKER_BOX
+  - WHITE_SHULKER_BOX
+  - ORANGE_SHULKER_BOX
+  - MAGENTA_SHULKER_BOX
+  - LIGHT_BLUE_SHULKER_BOX
+  - YELLOW_SHULKER_BOX
+  - LIME_SHULKER_BOX
+  - PINK_SHULKER_BOX
+  - GRAY_SHULKER_BOX
+  - LIGHT_GRAY_SHULKER_BOX
+  - CYAN_SHULKER_BOX
+  - PURPLE_SHULKER_BOX
+  - BLUE_SHULKER_BOX
+  - BROWN_SHULKER_BOX
+  - GREEN_SHULKER_BOX
+  - RED_SHULKER_BOX
+  - BLACK_SHULKER_BOX
+  # Spawners
+  - SPAWNER
+  # --- REDSTONE ---
+  - REDSTONE_BLOCK
+  - REDSTONE_WIRE
+  - REDSTONE_TORCH
+  - REDSTONE_WALL_TORCH
+  - STICKY_PISTON
+  - PISTON
+  - PISTON_HEAD
+  - MOVING_PISTON
+  - HOPPER
+  - DISPENSER
+  - DROPPER
+  - OBSERVER
+  - REPEATER
+  - COMPARATOR
+  - TARGET
+  - LECTERN
+  - DAYLIGHT_DETECTOR
+  - TRIPWIRE_HOOK
+  - TRIPWIRE
+  - BELL
+  - LEVER
+  - NOTE_BLOCK
+  - JUKEBOX
+  # Buttons
+  - STONE_BUTTON
+  - OAK_BUTTON
+  - SPRUCE_BUTTON
+  - BIRCH_BUTTON
+  - JUNGLE_BUTTON
+  - ACACIA_BUTTON
+  - DARK_OAK_BUTTON
+  - CRIMSON_BUTTON
+  - WARPED_BUTTON
+  - POLISHED_BLACKSTONE_BUTTON
+  # Pressure Plates
+  - STONE_PRESSURE_PLATE
+  - OAK_PRESSURE_PLATE
+  - SPRUCE_PRESSURE_PLATE
+  - BIRCH_PRESSURE_PLATE
+  - JUNGLE_PRESSURE_PLATE
+  - ACACIA_PRESSURE_PLATE
+  - DARK_OAK_PRESSURE_PLATE
+  - CRIMSON_PRESSURE_PLATE
+  - WARPED_PRESSURE_PLATE
+  - POLISHED_BLACKSTONE_PRESSURE_PLATE
+  - LIGHT_WEIGHTED_PRESSURE_PLATE
+  - HEAVY_WEIGHTED_PRESSURE_PLATE
+  # --- ORES ---
+  - DIAMOND_ORE
+  - DEEPSLATE_DIAMOND_ORE
+  - ANCIENT_DEBRIS
+  - GOLD_ORE
+  - DEEPSLATE_GOLD_ORE
+  - IRON_ORE
+  - DEEPSLATE_IRON_ORE
+  - COAL_ORE
+  - DEEPSLATE_COAL_ORE
+  - EMERALD_ORE
+  - DEEPSLATE_EMERALD_ORE
+  - REDSTONE_ORE
+  - DEEPSLATE_REDSTONE_ORE
+  - LAPIS_ORE
+  - DEEPSLATE_LAPIS_ORE
+  - COPPER_ORE
+  - DEEPSLATE_COPPER_ORE
+  - NETHER_QUARTZ_ORE
+  - NETHER_GOLD_ORE
+  - GILDED_BLACKSTONE
+  # --- WORKSTATIONS ---
+  - FURNACE
+  - BLAST_FURNACE
+  - SMOKER
+  - CRAFTING_TABLE
+  - ENCHANTING_TABLE
+  - BREWING_STAND
+  - ANVIL
+  - CHIPPED_ANVIL
+  - DAMAGED_ANVIL
+  - CAULDRON
+  - COMPOSTER
+  - FLETCHING_TABLE
+  - GRINDSTONE
+  - LOOM
+  - SMITHING_TABLE
+  - STONECUTTER
+  - CARTOGRAPHY_TABLE
+  # --- FARMING & NATURE ---
+  - BEE_NEST
+  - BEEHIVE
+  - TURTLE_EGG
+  - SNIFFER_EGG
+  - SUSPICIOUS_SAND
+  - SUSPICIOUS_GRAVEL
+  - AMETHYST_CLUSTER
+  - BUDDING_AMETHYST
+  - GLASS
+  - WHITE_STAINED_GLASS
+  - ORANGE_STAINED_GLASS
+  - MAGENTA_STAINED_GLASS
+  - LIGHT_BLUE_STAINED_GLASS
+  - YELLOW_STAINED_GLASS
+  - LIME_STAINED_GLASS
+  - PINK_STAINED_GLASS
+  - GRAY_STAINED_GLASS
+  - LIGHT_GRAY_STAINED_GLASS
+  - CYAN_STAINED_GLASS
+  - PURPLE_STAINED_GLASS
+  - BLUE_STAINED_GLASS
+  - BROWN_STAINED_GLASS
+  - GREEN_STAINED_GLASS
+  - RED_STAINED_GLASS
+  - BLACK_STAINED_GLASS
+  # --- SCULK ---
+  - SCULK_SENSOR
+  - CALIBRATED_SCULK_SENSOR
+  - SCULK_SHRIEKER
+  - SCULK_CATALYST
+  - DECORATED_POT
+
+# ================================================================
+# Anti-ESP for Entities (Players & Mobs)
+# ================================================================
+anti-esp:
+  # Enable or disable Anti-ESP globally.
+  enabled: true
+
+  # Distance in blocks within which entities are revealed/checked.
+  reveal-radius: 32.0
+
+  # Obfuscate other players.
+  obfuscate-players: true
+
+  # Obfuscate other mobs (monsters, passive animals, villagers, etc.).
+  obfuscate-mobs: true
+
+  # Hide the floating name plates above hidden players (server-side, via scoreboard team).
+  # Only applies when obfuscate-players is also true.
+  hide-nameplates: true
+
+  # Also hide entities that are already invisible (e.g., spectators).
+  hide-invisible-entities: false
+
+  # Additional entity types to hide (similar to block list above).
+  extra-entity-hide:
+    - ZOMBIE
+    - SKELETON
