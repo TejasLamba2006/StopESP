@@ -80,4 +80,4 @@ Found a bug or want a feature? Join the [Discord](https://discord.gg/msEkYDWpXM)
 
 ## License
 
-See [LICENSE](LICENSE).
+Released under the [MIT License](LICENSE).
